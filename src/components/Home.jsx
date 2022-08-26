@@ -11,8 +11,10 @@ function Home() {
   return (
     <>
     <motion.div 
-    initial={{x: "200vw"}}
-            animate={{x:"0", transition: {duration:1, ease:'easeInOut'}}} class= 'home'>
+      initial={{x: "200vw"}}
+      animate={{x:"0", transition: {duration:1, ease:'easeInOut'}}} 
+      class= 'home'
+    >
       <Top/>
       <Main/>
       

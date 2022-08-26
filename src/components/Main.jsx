@@ -138,8 +138,8 @@ function Main() {
           Y en búsqueda de nuevos desafíos para seguir creciendo.
       </p>
       </div>
-      <div className='proyectos'>
-        <h1>Proyectos</h1>
+      {/* <div className='proyectos'> */}
+        {/* <h1>Proyectos</h1>
         <div className='proyecto'>
         <h3>Henry Bootcamp, Buenos Aires, Argentina.</h3>
         <h2>Full Stack Web Developer - BUSPACK (trabajo grupal)</h2>
@@ -156,12 +156,66 @@ function Main() {
         loop
         height="20%"
         />
-        </div>
+        </div> */}
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="#!" data-toggle="modal" data-target="#exampleModal">
+      <img src="https://concepto.de/wp-content/uploads/2018/09/oc%C3%A9ano-e1537912445911-800x400.jpg" class="d-block w-100" alt="..."/>
+      </a>
+    </div>
+    <div class="carousel-item">
+    <video class="img-fluid" autoPlay loop muted>
+        <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="carousel-item">
+      <img src="https://concepto.de/wp-content/uploads/2018/09/oc%C3%A9ano-e1537912445911-800x400.jpg" class="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Launch demo modal
+</button>
+
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
       </div>
      </div>
-    </div>
+    // </div>
   )
 }
 
