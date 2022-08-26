@@ -1,0 +1,134 @@
+.container-main{
+ 
+    display: flex;
+    height: 100%;
+   
+}
+.sidebar{
+    border-right: 2px solid rgba(25, 25, 25, 0.763);
+    border-bottom: 2px solid rgba(25, 25, 25, 0.763);
+    border-bottom-right-radius: 20px;
+    padding-bottom: 30px;
+    width: 30%;
+}
+
+.singleCol {
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.accordion-header button {
+    border-bottom: 2px solid black;
+}
+
+.accordion-button {
+    font-size: inherit;
+    
+}
+.accordion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+}
+.accordion-item {
+    border: 1px solid rgba(35, 65, 100, .15)
+}
+
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background: rgb(20, 20, 21);
+    color: #9a5858;
+}
+
+.accordion-button:not(.collapsed)::after  {
+    filter: brightness(00%) invert(70%);
+}
+
+.accordion-button:focus {
+    box-shadow: inherit;
+}
+
+@media (max-width: 767px) {
+    .accordion-body h2 {
+        font-size: calc(.95rem + 1.5vw);
+    }
+}
+@media (max-width: 450px) {
+    .home{
+        width: 90vw;
+    }
+    .container-main{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 100%;
+        border: none;
+    }
+}
+.logo-react {
+
+    animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+/* #miImagen{
+    transform: rotate(-10deg);
+} */
+.tecnologias img{
+  height: 22px;
+}
+.educacion h6{
+    font-size: 12px;
+}
+.educacion h4{
+    font-size: 16px;
+    margin: 0;
+}
+.educacion p{
+    font-size: 12px;
+}
+.educacion{
+    padding: 4px;
+    transition: 0.5s;
+}
+
+.educacion1{
+    border-bottom: 1px solid rgba(21, 21, 21, 0.606);
+    margin-bottom: 5px;
+
+}
+.educacion:hover{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.content{
+    padding: 30px;
+    width: 70%;
+}
+.content h3{
+    border-bottom: 1.5px solid black;
+}
+.educacion a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.video {
+   
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 0px;
+    width: 50%;
+    box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);
+    
+}
