@@ -9,7 +9,7 @@ import postgreLogo from "../../Logos/postgresql.svg"
 import reduxLogo from "../../Logos/redux.svg"
 import figmaLogo from "../../Logos/figma-1.svg"
 import ReactPlayer from 'react-player'
-import videodogs from "../../dist/assets/videos/dogs app.mp4"
+import videodogs from "../assets/dogs-app.mp4"
 import { useModal } from "../Hooks/useModal";
 import Modal from "./Modal";
 import Form from "./Form"
