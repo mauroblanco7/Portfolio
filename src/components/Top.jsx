@@ -10,7 +10,7 @@ function Top() {
             class="col-12 name">Mauro Blanco</motion.div>
         </div>
         <div class='row fs'>
-            <div class="col-12 name">Full-stack web developer</div>
+            <div class="col-12 name name2">Full-stack web developer</div>
         </div>
         <div class="row redes">
             <div class="col-12 col-md-3 links"><div class='ico'><i class="fa-solid fa-envelope"></i></div><p>mauro.blnc.mb@gmail.com</p> </div>

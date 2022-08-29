@@ -149,7 +149,7 @@ function Main() {
   <div className='proyectos'>
     <h3>Proyectos y experiencias</h3>
       {/* --Carousel */}
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -158,7 +158,7 @@ function Main() {
   <div class="carousel-inner">
     <div class="carousel-item active" >
       <img src="https://media.discordapp.net/attachments/1009230548125888533/1013176360417624204/Buspack_Travel_-_Brave_16_8_2022_3_07_55_p._m._2.png?width=884&height=409" class="d-block w-100" onClick={openModal1} alt="BusPack"/>
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption">
         <h5>BusPack</h5>
       </div>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
@@ -236,7 +236,7 @@ function Main() {
     </div>
     <div class="carousel-item">
       <img src="https://media.discordapp.net/attachments/1009230548125888533/1013173907005649056/React_App_-_Brave_16_8_2022_7_45_19_p._m._2.png?width=881&height=409" class="d-block w-100" onClick={openModal2} alt="Dogs App"/>
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption ">
         <h5>Dogs App</h5>
       </div>
       <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
@@ -304,7 +304,7 @@ function Main() {
     </div>
     <div class="carousel-item">
       <img src="https://media.discordapp.net/attachments/1009230548125888533/1013173906376499200/Pokedex_-_Brave_16_8_2022_7_53_36_p._m._2.png?width=875&height=409" class="d-block w-100" onClick={openModal3} alt="Pokedex"/>
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption">
         <h5>Pokedex</h5>
       </div>
       <Modal isOpen={isOpenModal3} closeModal={closeModal3}>
