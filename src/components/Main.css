@@ -122,13 +122,54 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
-.video {
-   
+.educacion a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.carousel{
+    margin-top: 15px;
+}
+.carousel-item img{
+    /* width: 100%; */
+    height: 300px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition:all .4s ease
+}
+.carousel-item img:hover{
+    transform:scale(1.05);
+}
+.carousel-inner{
+    border-radius: 20px;
+
+}
+.carousel-caption h5{
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow:  0px 1px 13px #000000;
+  }
+  
+  to {
+    text-shadow: 0px 1px 13px #000000;
+  }
+}
+
+.contacto{
     display: flex;
-    margin: 0 auto;
     justify-content: center;
-    padding-top: 0px;
-    width: 50%;
-    box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);
-    
+    margin-top: 30px;
+}
+.contacto button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.contacto button:hover{
+   color: #000000;
+   background-color: white;
 }
