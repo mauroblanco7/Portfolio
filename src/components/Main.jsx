@@ -13,6 +13,7 @@ import videodogs from "../assets/dogs-app.mp4"
 import { useModal } from "../Hooks/useModal";
 import Modal from "./Modal";
 import Form from "./Form"
+import {motion} from "framer-motion"
 import { Link } from 'react-router-dom'
 
 function Main() {
@@ -22,7 +23,10 @@ function Main() {
   const [isOpenModal4, openModal4, closeModal4] = useModal(false);
   return (
     <div class="container-main" >
-     <div className='sidebar'>
+     <motion.div
+     initial={{y: "200vh"}}
+     animate={{y:"0", transition: {duration:3.5, ease:'easeInOut'}}} 
+      className='sidebar'>
      <div class="container singleCol">
         <div class="accordion accordion-flush" id="accordionExample">
             <div class="accordion-item">
@@ -137,8 +141,11 @@ function Main() {
             </div>
           </div>
       </div> 
-     </div>
-     <div className='content'>
+     </motion.div>
+     <motion.div 
+     initial={{x: "200vw"}}
+     animate={{x:"0", transition: {duration:3.5, ease:'easeInOut'}}} 
+     className='content'>
       <div className='about'>
       <h3>Sobre mi</h3>
       <p>Full Stack Developer con experiencia trabajando en NodeJS, React, Redux, SQL entre otras tecnologías del sector.
@@ -149,7 +156,7 @@ function Main() {
   <div className='proyectos'>
     <h3>Proyectos y experiencias</h3>
       {/* --Carousel */}
-<div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="false">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -390,7 +397,7 @@ mail
       </Modal>
      
 </div>
-      </div>
+      </motion.div>
      </div>
     // </div>
   )

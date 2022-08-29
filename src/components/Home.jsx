@@ -12,7 +12,7 @@ function Home() {
     <>
     <motion.div 
       initial={{x: "200vw"}}
-      animate={{x:"0", transition: {duration:1, ease:'easeInOut'}}} 
+      animate={{x:"0", transition: {duration:2.5, ease:'easeInOut'}}} 
       class= 'home'
     >
       <Top/>
