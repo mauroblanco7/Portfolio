@@ -10,8 +10,16 @@ import reduxLogo from "../../Logos/redux.svg"
 import figmaLogo from "../../Logos/figma-1.svg"
 import ReactPlayer from 'react-player'
 import videodogs from "../../dist/assets/videos/dogs app.mp4"
+import { useModal } from "../Hooks/useModal";
+import Modal from "./Modal";
+import Form from "./Form"
+import { Link } from 'react-router-dom'
 
 function Main() {
+  const [isOpenModal1, openModal1, closeModal1] = useModal(false);
+  const [isOpenModal2, openModal2, closeModal2] = useModal(false);
+  const [isOpenModal3, openModal3, closeModal3] = useModal(false);
+  const [isOpenModal4, openModal4, closeModal4] = useModal(false);
   return (
     <div class="container-main" >
      <div className='sidebar'>
@@ -138,81 +146,250 @@ function Main() {
           Y en búsqueda de nuevos desafíos para seguir creciendo.
       </p>
       </div>
-      {/* <div className='proyectos'> */}
-        {/* <h1>Proyectos</h1>
-        <div className='proyecto'>
-        <h3>Henry Bootcamp, Buenos Aires, Argentina.</h3>
-        <h2>Full Stack Web Developer - BUSPACK (trabajo grupal)</h2>
-        <ul>
-          <li><p>Diseñar y desarrollar una App para la compra de paquetes turísticos pre-armados que incluía: Login(firebase), pasarela de pagos (Stripe), carrito de compras, y un panel de admin para crear paquetes</p></li>
-          <li><p>Desarrollar la app en React-Redux con estilos en Bootstrap. Back desarrollado en Node. Base de datos en PostgreSQL y Sequelize.
-               Se utilizo la metodología SCRUM para el trabajo en equipo.</p></li>
-        </ul>
-        </div>
-        <div class="video">
-        <ReactPlayer
-        url={videodogs}
-        controls
-        loop
-        height="20%"
-        />
-        </div> */}
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div className='proyectos'>
+    <h3>Proyectos y experiencias</h3>
+      {/* --Carousel */}
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <a href="#!" data-toggle="modal" data-target="#exampleModal">
-      <img src="https://concepto.de/wp-content/uploads/2018/09/oc%C3%A9ano-e1537912445911-800x400.jpg" class="d-block w-100" alt="..."/>
-      </a>
-    </div>
-    <div class="carousel-item">
-    <video class="img-fluid" autoPlay loop muted>
-        <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
+    <div class="carousel-item active" >
+      <img src="https://media.discordapp.net/attachments/1009230548125888533/1013176360417624204/Buspack_Travel_-_Brave_16_8_2022_3_07_55_p._m._2.png?width=884&height=409" class="d-block w-100" onClick={openModal1} alt="BusPack"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>BusPack</h5>
+      </div>
+      <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
+      <video class="img-fluid" controls loop muted >
+        <source src={videodogs} type="video/mp4" />
       </video>
+        <h3>BusPack</h3>
+        <p>Henry Bootcamp, Buenos Aires, Argentina / Trabajo Grupal</p>
+        <h5>Puesto</h5>
+        <p>Full Stack Web Developer</p>
+        <h5>Tareas</h5>
+        <p>
+        Diseñar y desarrollar una App para la compra de paquetes turísticos pre-armados que incluía: Login(firebase), pasarela de pagos (Stripe), carrito de compras, y un panel de admin para crear paquetes.
+        Desarrollar la app en React-Redux con estilos en Bootstrap. Back desarrollado en Node. Base de datos en PostgreSQL y Sequelize.
+        Se utilizo la metodología SCRUM para el trabajo en equipo.
+        </p>
+        <div>
+        <h5>Repositorio</h5>
+        <a href="https://github.com/Wal-Hernandez/PF-grupo-09" target="_blank">
+          <p>https://github.com/Wal-Hernandez/PF-grupo-09</p>
+        
+        </a>
+        <h5>Deploy</h5>
+        <p>
+        <a href="https://travelbus-henry-96a9maamc-wal-hernandez.vercel.app/" target="_blank">
+        https://travelbus-henry-96a9maamc-wal-hernandez.vercel.app/
+        </a>
+        </p>
+     
+        </div>
+        <div>
+          <h5>Tecnologias utilizadas</h5>
+          <div className='modal-tecnologias'>
+    
+                    <li>
+                        <a href="https://reactjs.org" target="_blank">
+                          <img src={reactLogo} className="logo-react" alt="React logo" />
+                        </a>
+                        React JS {" "}
+                    </li>
+                    <li>
+                        <a href="https://www.javascript.com/" target="_blank">
+                          <img src={jsLogo} alt="JavaScript logo" />
+                        </a>
+                        JavaScript {" "}
+                    </li>
+                    <li>
+                        <a href="https://es.redux.js.org/" target="_blank">
+                          <img src={reduxLogo} alt="Redux logo" className="logo-react" />
+                        </a>
+                        Redux {" "}
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/es/" target="_blank">
+                          <img src={nodejsLogo} alt="Nodejs logo" />
+                        </a>
+                        Nodejs {" "}
+                    </li>
+                    <li>
+                        <a href="https://www.postgresql.org/" target="_blank">
+                          <img src={postgreLogo} alt="PostgreSQL logo" />
+                        </a>
+                        PostgreSQL {" "}
+                    </li>
+                    <li>
+                        <a href="https://getbootstrap.com/" target="_blank">
+                          <img src={bootstrapLogo} alt="Bootstrap logo" />
+                        </a>
+                        Bootstrap {" "} 
+                    </li>
+
+          </div>
+        </div>
+      </Modal>
     </div>
     <div class="carousel-item">
-      <img src="https://concepto.de/wp-content/uploads/2018/09/oc%C3%A9ano-e1537912445911-800x400.jpg" class="d-block w-100" alt="..."/>
+      <img src="https://media.discordapp.net/attachments/1009230548125888533/1013173907005649056/React_App_-_Brave_16_8_2022_7_45_19_p._m._2.png?width=881&height=409" class="d-block w-100" onClick={openModal2} alt="Dogs App"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Dogs App</h5>
+      </div>
+      <Modal isOpen={isOpenModal2} closeModal={closeModal2}>
+        <video class="img-fluid" controls loop muted >
+        <source src={videodogs} type="video/mp4" />
+      </video>
+        <h3>Dogs App</h3>
+        <p>Henry Bootcamp, Buenos Aires, Argentina</p>
+        <h5>Puesto</h5>
+        <p> Full Stack Web Developer</p>
+        <h5>Tareas</h5>
+        <p>
+          Diseñar y desarrollar una App donde podras encontrar todas las razas de perros, filtrarlos, ordenarlos y crear nuevas razas. Se utilizo una API para obtener los datos 
+          La app se desarrollo en React-Redux con estilos en CSS puro.
+          Backend desarrollado en Nodejs. 
+          Base de datos en PostgreSQL y Sequelize.
+        </p>
+        <div>
+        <h5>Repositorio</h5>
+        <a href="https://github.com/mauroblanco7/DOGS-APP" target="_blank">
+          <p>https://github.com/mauroblanco7/DOGS-APP</p>
+        
+        </a>
+        <h5>Deploy</h5>
+        <p>Aun no disponible</p>
+        </div>
+        <div>
+          <h5>Tecnologias utilizadas</h5>
+          <div className='modal-tecnologias'>
+    
+                    <li>
+                        <a href="https://reactjs.org" target="_blank">
+                          <img src={reactLogo} className="logo-react" alt="React logo" />
+                        </a>
+                        React JS {" "}
+                    </li>
+                    <li>
+                        <a href="https://www.javascript.com/" target="_blank">
+                          <img src={jsLogo} alt="JavaScript logo" />
+                        </a>
+                        JavaScript {" "}
+                    </li>
+                    <li>
+                        <a href="https://es.redux.js.org/" target="_blank">
+                          <img src={reduxLogo} alt="Redux logo" className="logo-react" />
+                        </a>
+                        Redux {" "}
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/es/" target="_blank">
+                          <img src={nodejsLogo} alt="Nodejs logo" />
+                        </a>
+                        Nodejs {" "}
+                    </li>
+                    <li>
+                        <a href="https://www.postgresql.org/" target="_blank">
+                          <img src={postgreLogo} alt="PostgreSQL logo" />
+                        </a>
+                        PostgreSQL {" "}
+                    </li>
+
+          </div>
+        </div>
+      </Modal>
+    </div>
+    <div class="carousel-item">
+      <img src="https://media.discordapp.net/attachments/1009230548125888533/1013173906376499200/Pokedex_-_Brave_16_8_2022_7_53_36_p._m._2.png?width=875&height=409" class="d-block w-100" onClick={openModal3} alt="Pokedex"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Pokedex</h5>
+      </div>
+      <Modal isOpen={isOpenModal3} closeModal={closeModal3}>
+      <video class="img-fluid" controls loop muted >
+        <source src={videodogs} type="video/mp4" />
+      </video>
+        <h3>Pokedex</h3>
+        <p>Henry Bootcamp, Buenos Aires, Argentina</p>
+        <h5>Puesto</h5>
+        <p> Full Stack Web Developer</p>
+        <h5>Tareas</h5>
+        <p>
+          Diseñar y desarrollar una App donde podras encontrar pokemones, filtrarlos, ordenarlos y crear nuevos. Se utilizo una API para obtener los datos 
+          La app se desarrollo en React-Redux con estilos en CSS puro.
+          Backend desarrollado en Nodejs. 
+          Base de datos en PostgreSQL y Sequelize.
+        </p>
+        <div>
+        <h5>Repositorio</h5>
+        <a href="https://github.com/mauroblanco7/PI-pokemon-henry" target="_blank">
+          <p>https://github.com/mauroblanco7/PI-pokemon-henry</p>
+        
+        </a>
+        <h5>Deploy</h5>
+        <p>Aun no disponible</p>
+        </div>
+        <div>
+          <h5>Tecnologias utilizadas</h5>
+          <div className='modal-tecnologias'>
+    
+                    <li>
+                        <a href="https://reactjs.org" target="_blank">
+                          <img src={reactLogo} className="logo-react" alt="React logo" />
+                        </a>
+                        React JS {" "}
+                    </li>
+                    <li>
+                        <a href="https://www.javascript.com/" target="_blank">
+                          <img src={jsLogo} alt="JavaScript logo" />
+                        </a>
+                        JavaScript {" "}
+                    </li>
+                    <li>
+                        <a href="https://es.redux.js.org/" target="_blank">
+                          <img src={reduxLogo} alt="Redux logo" className="logo-react" />
+                        </a>
+                        Redux {" "}
+                    </li>
+                    <li>
+                        <a href="https://nodejs.org/es/" target="_blank">
+                          <img src={nodejsLogo} alt="Nodejs logo" />
+                        </a>
+                        Nodejs {" "}
+                    </li>
+                    <li>
+                        <a href="https://www.postgresql.org/" target="_blank">
+                          <img src={postgreLogo} alt="PostgreSQL logo" />
+                        </a>
+                        PostgreSQL {" "}
+                    </li>
+
+          </div>
+        </div>
+      </Modal>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
-
-
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
-
+<div className='contacto'>
+  <button onClick={openModal4}>Contactame {" "}<span class="material-symbols-outlined correo">
+mail
+</span></button>
+  <Modal isOpen={isOpenModal4} closeModal={closeModal4}>
+        <Form></Form>
+      </Modal>
+     
+</div>
       </div>
      </div>
     // </div>

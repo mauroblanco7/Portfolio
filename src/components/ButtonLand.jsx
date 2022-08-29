@@ -24,7 +24,7 @@ function ButtonLand() {
     animate="show">
         <Link to="/Portfolio/home">
         <button>
-            Go to interactive CV
+            Go to my interactive CV
         </button>
         </Link>
     </motion.div>
