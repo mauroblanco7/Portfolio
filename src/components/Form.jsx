@@ -1,45 +1,3 @@
-// import React from 'react'
-// import emailjs from 'email-js';
-
-// const Form = () => {
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-
-//     emailjs.sendForm('gmail', 'template_hdluw1p', form.current, 'KGIOnLSnFM37YOMNq')
-//       .then((result) => {
-//           console.log(result.text);
-//       }, (error) => {
-//           console.log(error.text);
-//       });
-//       form.current.reset()
-//   };
-//   return (
-//     <form onSubmit={sendEmail}>
-
-  // <div class="form-outline mb-4">
-  //   <input type="text" id="form4Example1" name='name' class="form-control" />
-  //   <label class="form-label" for="form4Example1">Name</label>
-  // </div>
-
-
-  // <div class="form-outline mb-4">
-  //   <input type="email" id="form4Example2" name='email' class="form-control" />
-  //   <label class="form-label" for="form4Example2">Email</label>
-  // </div>
-
-
-  // <div class="form-outline mb-4">
-  //   <textarea class="form-control" name='message' id="form4Example3" rows="4"></textarea>
-  //   <label class="form-label" for="form4Example3">Mensaje</label>
-  // </div>
-
-
-//   <button type="submit" class=" btn-block mb-4">Enviar</button>
-// </form>
-//   )
-// }
-
-// export default Form
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
@@ -89,7 +47,7 @@ export const Form = () => {
   </div>
   <div class="form-outline mb-4">
     <input type="email" id="form4Example2" name='email' class="form-control" />
-    <label class="form-label" for="form4Example2">Email</label>
+    <label class="form-label" for="form4Example2">Tu email</label>
   </div>
   
   <div class="form-outline mb-4">
