@@ -62,11 +62,12 @@
       transform: rotate(359deg);
     }
   }
-/* #miImagen{
-    transform: rotate(-10deg);
-} */
+
 .tecnologias img{
   height: 22px;
+}
+.tecnologias .ex{
+    height: 15px;
 }
 .educacion h6{
     font-size: 12px;

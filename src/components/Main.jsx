@@ -4,6 +4,7 @@ import reactLogo from '../assets/react.svg'
 import viteLogo from "/vite.svg"
 import bootstrapLogo from "../../Logos/bootstrap-4.svg"
 import jsLogo from "../../Logos/logo-javascript.svg"
+import expressLogo from "../../Logos/express.svg"
 import nodejsLogo from "../../Logos/nodejs-icon.svg"
 import postgreLogo from "../../Logos/postgresql.svg"
 import reduxLogo from "../../Logos/redux.svg"
@@ -86,6 +87,11 @@ function Main() {
                           <img src={postgreLogo} alt="PostgreSQL logo" />
                         </a>
                     </li>
+                    <li>Sequelize {" "}
+                        <a href="https://sequelize.org/" target="_blank">
+                          <img src="https://www.vectorlogo.zone/logos/sequelizejs/sequelizejs-icon.svg" alt="PostgreSQL logo" />
+                        </a>
+                    </li>
                     <li>Bootstrap {" "} 
                         <a href="https://getbootstrap.com/" target="_blank">
                           <img src={bootstrapLogo} alt="Bootstrap logo" />
@@ -101,6 +107,22 @@ function Main() {
                           <img src={figmaLogo} alt="Figma logo" />
                         </a>
                     </li>
+                    <li>Git {" "}
+                        <a href="https://git-scm.com/" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/4494/4494748.png" alt="Git logo" />
+                        </a>
+                    </li>
+                    <li>Express {" "}
+                        <a href="https://expressjs.com/es/" target="_blank">
+                          <img src={expressLogo} class="ex" alt="Express logo" />
+                        </a>
+                    </li>
+                    <li>CSS3 {" "}
+                        <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"  alt="CSS logo" />
+                        </a>
+                    </li>
+
                   </ul>
                 </div>
               </div>
@@ -160,7 +182,7 @@ function Main() {
   <div className='proyectos'>
     <h3>Proyectos y experiencias</h3>
       {/* --Carousel */}
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="false">
+<div id="carouselExampleDark" class="carousel carousel-dark slide"  data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -168,7 +190,7 @@ function Main() {
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" >
+    <div class="carousel-item active" pause="hover" >
       <img src="https://media.discordapp.net/attachments/1009230548125888533/1013176360417624204/Buspack_Travel_-_Brave_16_8_2022_3_07_55_p._m._2.png?width=884&height=409" class="d-block w-100" onClick={openModal1} alt="BusPack"/>
       <div class="carousel-caption">
         <h5>BusPack</h5>
@@ -309,6 +331,18 @@ function Main() {
                         </a>
                         PostgreSQL {" "}
                     </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"  alt="CSS logo" />
+                        </a>
+                        CSS3 {" "}
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML logo" />
+                        </a>
+                        HTML5 {" "}
+                    </li>
 
           </div>
         </div>
@@ -376,6 +410,18 @@ function Main() {
                           <img src={postgreLogo} alt="PostgreSQL logo" />
                         </a>
                         PostgreSQL {" "}
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"  alt="CSS logo" />
+                        </a>
+                        CSS3 {" "}
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML logo" />
+                        </a>
+                        HTML5 {" "}
                     </li>
 
           </div>
