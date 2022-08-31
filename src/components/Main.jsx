@@ -9,7 +9,10 @@ import postgreLogo from "../../Logos/postgresql.svg"
 import reduxLogo from "../../Logos/redux.svg"
 import figmaLogo from "../../Logos/figma-1.svg"
 import ReactPlayer from 'react-player'
-import videodogs from "../assets/dogs-app.mp4"
+import videodogs from "../assets/DogsAPP2.mp4"
+import videoBusPack from "../assets/Buspack2.mp4"
+import videoPokedex from "../assets/Pokedex.mp4"
+import videodPunto from "../assets/PUNTO VIAJES.mp4"
 import { useModal } from "../Hooks/useModal";
 import Modal from "./Modal";
 import Form from "./Form"
@@ -21,6 +24,7 @@ function Main() {
   const [isOpenModal2, openModal2, closeModal2] = useModal(false);
   const [isOpenModal3, openModal3, closeModal3] = useModal(false);
   const [isOpenModal4, openModal4, closeModal4] = useModal(false);
+  const [isOpenModal5, openModal5, closeModal5] = useModal(false);
   return (
     <div class="container-main" >
      <motion.div
@@ -161,6 +165,7 @@ function Main() {
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" >
@@ -170,7 +175,7 @@ function Main() {
       </div>
       <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
       <video class="img-fluid" controls loop muted >
-        <source src={videodogs} type="video/mp4" />
+        <source src={videoBusPack} type="video/mp4" />
       </video>
         <h3>BusPack</h3>
         <p>Henry Bootcamp, Buenos Aires, Argentina / Trabajo Grupal</p>
@@ -316,7 +321,7 @@ function Main() {
       </div>
       <Modal isOpen={isOpenModal3} closeModal={closeModal3}>
       <video class="img-fluid" controls loop muted >
-        <source src={videodogs} type="video/mp4" />
+        <source src={videoPokedex} type="video/mp4" />
       </video>
         <h3>Pokedex</h3>
         <p>Henry Bootcamp, Buenos Aires, Argentina</p>
@@ -377,6 +382,53 @@ function Main() {
         </div>
       </Modal>
     </div>
+    <div class="carousel-item">
+      <img src="https://media.discordapp.net/attachments/1009230548125888533/1014323335565414480/PUNTO_VIAJES_-_Brave_30_8_2022_8_55_40_p._m._5.png?width=883&height=409" class="d-block w-100" onClick={openModal5} alt="Punto Viajes"/>
+      <div class="carousel-caption">
+        <h5>Punto Viajes</h5>
+      </div>
+      <Modal isOpen={isOpenModal5} closeModal={closeModal5}>
+      <video class="img-fluid" controls loop muted >
+        <source src={videodPunto} type="video/mp4" />
+      </video>
+        <h3>Punto Viajes</h3>
+        <p>Proyecto Individuak</p>
+        <h5>Puesto</h5>
+        <p> Frontend Web Developer</p>
+        <h5>Tareas</h5>
+        <p>
+          Diseñar y desarrollar una App para la empresa Punto Viajes, donde podras encontar diferentes destinos de viajes a traves de la argentina y con una comunicacion directa con el WhatsApp de la empresa para la reserva de paquetes. Este fue mi primer proyecto donde use CSS, y HTML puro.
+          (Esta pagina no es la que usa la empresa actualmente)
+        </p>
+        <div>
+        <h5>Repositorio</h5>
+        <a href="https://github.com/mauroblanco7/Punto-Viajes-" target="_blank">
+          <p>https://github.com/mauroblanco7/Punto-Viajes-</p>
+        
+        </a>
+        <h5>Deploy</h5>
+        <p>Aun no disponible</p>
+        </div>
+        <div>
+          <h5>Tecnologias utilizadas</h5>
+          <div className='modal-tecnologias'>
+    
+                    <li>
+                        <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"  alt="CSS logo" />
+                        </a>
+                        CSS3 {" "}
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML logo" />
+                        </a>
+                        HTML5 {" "}
+                    </li>
+          </div>
+        </div>
+      </Modal>
+    </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -399,7 +451,6 @@ mail
 </div>
       </motion.div>
      </div>
-    // </div>
   )
 }
 
