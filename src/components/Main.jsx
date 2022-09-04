@@ -157,7 +157,7 @@ function Main() {
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                  <div class="educacion ">
-                  <a href="https://www.efset.org/es/ef-set-50/take-test/#set50-131/result" target="_blank">
+                  <a href="https://www.efset.org/cert/n3bbaF" target="_blank">
                   <h6>2022</h6>
                   <h4>Inglés: B2 - Upper intermediate. (EF SET).</h4>
                   </a>
@@ -438,7 +438,7 @@ function Main() {
         <source src={videodPunto} type="video/mp4" />
       </video>
         <h3>Punto Viajes</h3>
-        <p>Proyecto Individuak</p>
+        <p>Proyecto Individual</p>
         <h5>Puesto</h5>
         <p> Frontend Web Developer</p>
         <h5>Tareas</h5>
