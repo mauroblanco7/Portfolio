@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const svgVariants = {
@@ -14,21 +14,19 @@ const svgVariants = {
   },
 };
 
-
 function ButtonLand() {
   return (
-    <motion.div  
-    className='btn-land'
-    variants={svgVariants}
-    initial="hidden"
-    animate="show">
-        <Link to="/Portfolio/home">
-        <button>
-            Go to my interactive CV
-        </button>
-        </Link>
+    <motion.div
+      className="btn-land"
+      variants={svgVariants}
+      initial="hidden"
+      animate="show"
+    >
+      <Link to="/Portfolio/home">
+        <button>Go to my interactive CV</button>
+      </Link>
     </motion.div>
-  )
+  );
 }
 
-export default ButtonLand
+export default ButtonLand;
